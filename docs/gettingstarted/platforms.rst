@@ -40,15 +40,17 @@ Raspberry Pi
 
 Pine64
 ------
+
 .. figure:: ../../img/pinea64-plus.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: Pine64 A64 Plus
 
 Hardkernel ODROID XU4
 ---------------------
+
 .. figure:: ../../img/odroid-xu4q.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: Odroid XU4Q
 
@@ -56,7 +58,7 @@ FriendlyElec
 ------------
 
 .. figure:: ../../img/nanopc-t4.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: NanoPC T4
 
@@ -64,7 +66,7 @@ Orange Pi
 ---------
 
 .. figure:: ../../img/orange-pi-3.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: Orange Pi 3
 
@@ -72,7 +74,7 @@ ASUS Tinker Board / S
 ---------------------
 
 .. figure:: ../../img/asus_tinker_board_s.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: Asus Tinkerboard S
 
@@ -84,7 +86,7 @@ Khadas VIM3
 -----------
 
 .. figure:: ../../img/khadas_vim3_basic.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: Khadas VIM 3
 
@@ -95,7 +97,7 @@ NEMS Linux Appliance
 --------------------
 
 .. figure:: ../../img/nems-fitlet2.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: Fitlet 2
 
