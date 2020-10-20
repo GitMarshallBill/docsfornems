@@ -41,17 +41,14 @@ DHT22/AM2302
 `Buy on Amazon.com <https://amzn.to/3alpeCE>`__
 
 
-
-The DHT22 (or AM2302 for the wired version) is more accurate, and has a
-significantly wider range, making it suitable for measuring more extreme
-temperatures and humidity. This can be useful if you wish to use NEMS
-
-
 .. figure:: ../../img/dht22.jpg
   :width: 130
   :align: left
   :alt: DHT22 Sensor
-  
+
+The DHT22 (or AM2302 for the wired version) is more accurate, and has a
+significantly wider range, making it suitable for measuring more extreme
+temperatures and humidity. This can be useful if you wish to use NEMS
 Linux to alert you should your pipes be at risk of freezing, or your
 freezer compressor failing.
 
