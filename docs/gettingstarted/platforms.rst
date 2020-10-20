@@ -32,7 +32,7 @@ complete list of supported platforms.
 Raspberry Pi
 ------------
 .. figure:: ../../img/raspberry_pi_3_b_plus.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: Raspberry Pi 3 B Plus
 
