@@ -58,7 +58,7 @@ FriendlyElec
 ------------
 
 .. figure:: ../../img/nanopc-t4.png
-  :width: 500
+  :width: 400
   :align: center
   :alt: NanoPC T4
 
@@ -86,7 +86,7 @@ Khadas VIM3
 -----------
 
 .. figure:: ../../img/khadas_vim3_basic.png
-  :width: 500
+  :width: 400
   :align: center
   :alt: Khadas VIM 3
 
