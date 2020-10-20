@@ -92,7 +92,11 @@ Khadas VIM3
   :alt: Khadas VIM 3
 
 You can boot from SD or USB, then install NEMS Linux to the integrated
-eMMC storage by typing ``sudo nems-install``
+eMMC storage by typing:
+
+.. code-block:: console
+
+    sudo nems-install
 
 NEMS Linux Appliance
 --------------------
@@ -338,9 +342,10 @@ Initialize Your Docker-Based NEMS Server
 Initializing a NEMS Server within a Docker Container is different than
 all other platforms.
 
-On the Docker host, simply run:
+On the Docker host, simply run
+.. code-block:: console
 
-``docker exec -it nemslinux nems-init``
+   docker exec -it nemslinux nems-init
 
 Access NEMS Linux CLI
 ---------------------
@@ -348,4 +353,6 @@ Access NEMS Linux CLI
 Should you have need to access the NEMS Linux CLI, you may do so by
 launching *bash* in your container.
 
-``docker exec -it nemslinux bash``
+.. code-block:: console
+
+   docker exec -it nemslinux bash
