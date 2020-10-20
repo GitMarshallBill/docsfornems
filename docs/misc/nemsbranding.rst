@@ -17,14 +17,14 @@ Logo Options
 ~~~~~~~~~~~~
 .. figure:: ../../img/nems-fullcolour_sm.png
   :width: 150
-  :align: center
+  :align: left
   :alt: NEMS Full Colour Small
 
 -  `nems-fullcolour.png <https://docs.nemslinux.com/_detail/nems-fullcolour.png?id=branding>`__
 -  `Nems-01.eps <https://docs.nemslinux.com/_detail/Nems-01.eps?id=branding>`__
 
 .. figure:: ../../img/nems-greyscale_sm.png
-  :align: center
+  :align: left
   :alt: NEMS Greyscale Small
 
 -  `nems-greyscale.png <https://docs.nemslinux.com/_detail/nems-greyscale.png?id=branding>`__
@@ -32,7 +32,7 @@ Logo Options
 
 .. figure:: ../../img/nems-secondary-fullcolour_sm.png
   :width: 150
-  :align: center
+  :align: left
   :alt: NEMS Secondary Full Colour Small
 
 -  `nems-secondary-fullcolour.png <https://docs.nemslinux.com/_detail/nems-secondary-fullcolour.png?id=branding>`__
@@ -40,7 +40,7 @@ Logo Options
 
 .. figure:: ../../img/nems-secondary-greyscale_sm.png
   :width: 150
-  :align: center
+  :align: left
   :alt: NEMS Secondary Greyscale Small
 
 -  `nems-secondary-greyscale.png <https://docs.nemslinux.com/_detail/nems-secondary-greyscale.png?id=branding>`__
@@ -48,7 +48,7 @@ Logo Options
 
 .. figure:: ../../img/nems-secondary-white_sm.png
   :width: 150
-  :align: center
+  :align: left
   :alt: NEMS Secondary White Small
 
 -  `nems-secondary-white.png <https://docs.nemslinux.com/_detail/nems-secondary-white.png?id=branding>`__
@@ -56,7 +56,7 @@ Logo Options
 
 .. figure:: ../../img/nems-white_sm.png
   :width: 150
-  :align: center
+  :align: left
   :alt: NEMS White Small
 
 -  `nems-white.png <https://docs.nemslinux.com/_detail/nems-white.png?id=branding>`__
@@ -70,7 +70,7 @@ was created by Robbie Ferguson.
 
 .. figure:: ../../img/nconf_logo_sm.png
   :width: 150
-  :align: center
+  :align: left
   :alt: NEMS Configurator
 
 -  `nconf_logo.png <https://docs.nemslinux.com/_detail/nconf_logo.png?id=branding>`__
@@ -86,7 +86,7 @@ was darkened to make it stand out.
 
 .. figure:: ../../img/tv-icon.png
   :width: 150
-  :align: center
+  :align: left
   :alt: TV Icon
 
 -  `tv-icon.png <https://docs.nemslinux.com/_detail/tv-icon.png?id=branding>`__
@@ -99,7 +99,7 @@ AnjaliOldLipi font in #699bdf (light blue, representing the sky).
 
 .. figure:: ../../img/ncs_sm.png
   :width: 150
-  :align: center
+  :align: left
   :alt: NEMS Cloud Services
 
 -  `ncs.png <https://docs.nemslinux.com/_detail/ncs.png?id=branding>`__
