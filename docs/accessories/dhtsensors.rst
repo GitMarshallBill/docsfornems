@@ -23,7 +23,7 @@ DHT11
 
 
 .. figure:: ../../img/dht11.jpg
-  :width: 150
+  :width: 140
   :align: left
   :alt: DHT11 Sensor
 
