@@ -343,6 +343,7 @@ Initializing a NEMS Server within a Docker Container is different than
 all other platforms.
 
 On the Docker host, simply run
+
 .. code-block:: console
 
    docker exec -it nemslinux nems-init
