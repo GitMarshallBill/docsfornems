@@ -23,7 +23,7 @@ DHT11
 
 
 .. figure:: ../../img/dht11.jpg
-  :width: 140
+  :width: 130
   :align: left
   :alt: DHT11 Sensor
 
@@ -42,7 +42,7 @@ DHT22/AM2302
 
 
 .. figure:: ../../img/dht22.jpg
-  :width: 140
+  :width: 130
   :align: left
   :alt: DHT22 Sensor
 
