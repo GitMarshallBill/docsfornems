@@ -31,6 +31,7 @@ complete list of supported platforms.
 
 Raspberry Pi
 ------------
+
 .. figure:: ../../img/raspberry_pi_3_b_plus.png
   :width: 500
   :align: center
@@ -91,7 +92,7 @@ Khadas VIM3
   :alt: Khadas VIM 3
 
 You can boot from SD or USB, then install NEMS Linux to the integrated
-eMMC storage by typing *sudo nems-install*
+eMMC storage by typing ``sudo nems-install``
 
 NEMS Linux Appliance
 --------------------
@@ -320,7 +321,7 @@ With USB Support
 ~~~~~~~~~~~~~~~~
 
 To connect a USB device such
-as `temper <https://docs.nemslinux.com/hardware/temper>`__ to your
+as `temper <https://docs2.nemslinux.com/en/latest/accessories/temper.html>`__ to your
 Docker-based NEMS Server, first determine its /dev assignment on your
 host, and then run NEMS as follows, replacing ttyUSB0 with your actual
 USB device:
@@ -339,7 +340,7 @@ all other platforms.
 
 On the Docker host, simply run:
 
-docker exec -it nemslinux nems-init
+``docker exec -it nemslinux nems-init``
 
 Access NEMS Linux CLI
 ---------------------
@@ -347,4 +348,4 @@ Access NEMS Linux CLI
 Should you have need to access the NEMS Linux CLI, you may do so by
 launching *bash* in your container.
 
-docker exec -it nemslinux bash
+``docker exec -it nemslinux bash``
