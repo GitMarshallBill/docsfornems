@@ -42,7 +42,7 @@ DHT22/AM2302
 
 
 .. figure:: ../../img/dht22.jpg
-  :width: 150
+  :width: 140
   :align: left
   :alt: DHT22 Sensor
 
