@@ -25,13 +25,17 @@ the Command Prompt as Administrator and type the following:
 
 IPv4 Networks:
 
-netsh advfirewall firewall add rule name="ICMP Allow incoming V4 echo
-request" protocol=icmpv4:8,any **dir**\ =in action=allow
+.. code-block:: console
+
+   netsh advfirewall firewall add rule name="ICMP Allow incoming V4 echo
+   request" protocol=icmpv4:8,any **dir**\ =in action=allow
 
 IPv6 Networks:
 
-netsh advfirewall firewall add rule name="ICMP Allow incoming V6 echo
-request" protocol=icmpv6:8,any **dir**\ =in action=allow
+.. code-block:: console
+
+   netsh advfirewall firewall add rule name="ICMP Allow incoming V6 echo
+   request" protocol=icmpv6:8,any **dir**\ =in action=allow
 
 Third Party Firewall
 --------------------
@@ -52,8 +56,7 @@ Here are some things to look for:
    those cases, you can simply enable/allow ping replies. It may be
    called “ping”, “incoming ping”, “ICMP Echo Reply”, or similar.
 
-**DO NOT SIMPLY DISABLE YOUR FIREWALL.** Correctly establish a firewall
-rule within your firewall application.
+.. Warning:: **DO NOT SIMPLY DISABLE YOUR FIREWALL.** Correctly establish a firewall rule within your firewall application.
 
 Monitor Windows Machines with Windows Management Instrumentation (WMI)
 ======================================================================
@@ -100,7 +103,7 @@ above systems will deny remote access to the registry.
    started and set to **Automatic**.
 
 .. figure:: ../../img/wmi_windows_02.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: Server
 
@@ -108,7 +111,7 @@ above systems will deny remote access to the registry.
    Verify that it too is started and set to **Automatic**.
 
 .. figure:: ../../img/wmi_windows_03.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: Windows Management Instrumentation
 
@@ -135,7 +138,7 @@ On the monitored host machine, right-click on *My Computer*, and
 navigate to Manage \| Services and Applications \| WMI Control.
 
 .. figure:: ../../img/wmi_windows_04.png
-  :width: 600
+  :width: 400
   :align: center
   :alt: WMI Control
 
@@ -144,7 +147,7 @@ navigate to Manage \| Services and Applications \| WMI Control.
 3. Expand the Root node and select CIMV2, then click Security.
 
 .. figure:: ../../img/wmi_windows_05.png
-  :width: 600
+  :width: 400
   :align: center
   :alt: CIMV2
 
@@ -152,14 +155,14 @@ Select the user in the *Group or user names* box. If not listed
 select **Add**.
 
 .. figure:: ../../img/wmi_windows_06.png
-  :width: 600
+  :width: 400
   :align: center
   :alt: Add User to CIMV2
 
 Type in the user name and click **Check Names**.
 
 .. figure:: ../../img/wmi_windows_07.png
-  :width: 600
+  :width: 400
   :align: center
   :alt: Check Names
 
@@ -172,12 +175,12 @@ following check boxes in the Allow column:
 4. Read Security
 
 .. figure:: ../../img/wmi_windows_08.png
-  :width: 600
+  :width: 400
   :align: center
   :alt: Execute Methods and Enable Account
 
 .. figure:: ../../img/wmi_windows_09.png
-  :width: 600
+  :width: 400
   :align: center
   :alt: Remote Enable and Read Security
 
@@ -197,7 +200,7 @@ WMI.
 6. Click **Apply**.
 
 .. figure:: ../../img/wmi_windows_10.png
-  :width: 600
+  :width: 400
   :align: center
   :alt: Enable Distributed COM
 
@@ -212,7 +215,7 @@ WMI.
    necessary for the remote user.
 
 .. figure:: ../../img/wmi_windows_11.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: COM Security
 
@@ -221,7 +224,7 @@ for Administrators area by enabling all of the check boxes in the Allow
 column.
 
 .. figure:: ../../img/wmi_windows_12.png
-  :width: 600
+  :width: 400
   :align: center
   :alt: Permissions
 
@@ -246,8 +249,10 @@ of a domain.**
 
 Enter the following in an Administrator Command Prompt:
 
-netsh advfirewall firewall **set** rule **group**\ =”windows management
-instrumentation (wmi)” new enable=yes
+.. code-block:: console
+
+   netsh advfirewall firewall **set** rule **group**\ =”windows management
+   instrumentation (wmi)” new enable=yes
 
 **Add Your Windows User to NEMS SST**
 
@@ -255,7 +260,7 @@ Enter the username and password of the user created on the Windows
 devices who was granted access to the WMI data.
 
 .. figure:: ../../img/nems_sst_windows_domain_credentials.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: SST Domain Credentials
 
@@ -270,7 +275,7 @@ scroll down to the check_win\_\ *xxx* commands to choose the command you
 wish to add.
 
 .. figure:: ../../img/nconf_add_advanced_service.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: Add advanced service
 
@@ -285,7 +290,7 @@ When complete these commands will now be available in the *Advanced
 Services* list.
 
 .. figure:: ../../img/nconf_advanced_services_check_wmi.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: Advanced services list
 
@@ -304,10 +309,7 @@ Monitoring Server to communicate with the Linux machines on your server
 to determine things like free disk space, CPU load, and detect possible
 issues that a simple ping can't determine.
 
-As of NEMS 1.2 NSClient++ is optional for monitoring of Windows
-computers (thanks to the addition of WMIC). If you’d like to use it,
-please follow the directions below, otherwise use the provided
-WMIC-based check commands.
+.. Warning:: As of NEMS 1.2 NSClient++ is optional for monitoring of Windows computers (thanks to the addition of WMIC). If you’d like to use it, please follow the directions below, otherwise use the provided WMIC-based check commands.
 
 1. Grab the latest Windows client at https://www.nsclient.org/download/
 
@@ -328,21 +330,20 @@ WMIC-based check commands.
    -  Screen should look a little something like this: 
 
    .. figure:: ../../img/nsclient-setup.png
-    :width: 600
+    :width: 500
     :align: center
     :alt: NSClient setup
 
    -  Add your Windows host to NEMS.
 
-**Important Firewall Note**
-
-If you have a software firewall running on your Windows machine, setup
-an exception for your NEMS server IP to gain access through ports 5666
-and 12489.
+.. Tip :: **Important Firewall Note** 
+          If you have a software firewall running on your Windows machine, setup
+          an exception for your NEMS server IP to gain access through ports 5666
+          and 12489.
 
 And there we have it! Your NEMS Server can now check your Windows
 machine at a deeper level
-using `check_nrpe <https://docs.nemslinux.com/check_commands/check_nrpe>`__.
+using `check_nrpe <https://docs2.nemslinux.com/en/latest/advanced/monitorMsWindowsHosts.html#monitor-windows-machines-with-nrpe>`__.
 
 Special Thanks
 ==============

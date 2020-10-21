@@ -25,6 +25,13 @@ NEMS Linux documentation, work in progress.
     gettingstarted/notification_definitions
     gettingstarted/exercises
     gettingstarted/faq
+    gettingstarted/rpipinout
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Basic Setup
+
+    basic/checkcommands    
 
 
 .. toctree::
@@ -39,7 +46,7 @@ NEMS Linux documentation, work in progress.
 
 .. toctree::
     :maxdepth: 2
-    :caption: Commands
+    :caption: NEMS Commands
 
     commands/nems_commands
 
@@ -47,9 +54,19 @@ NEMS Linux documentation, work in progress.
     :maxdepth: 1
     :caption: Applications
 
+    apps/serveroverview
     apps/nemssst
-    apps/cockpit
+    apps/nconf
+    apps/adagios
+    apps/mobileui
     apps/nems-dashboard
+    apps/tactivaloverview
+    apps/nemscloudservices
+    apps/monitorix
+    apps/cockpit
+    apps/monitservicemonitor
+    apps/migrator
+    
 
 .. toctree::
     :maxdepth: 2

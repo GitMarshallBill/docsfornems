@@ -92,12 +92,12 @@ Khadas VIM3
   :alt: Khadas VIM 3
 
 You can boot from SD or USB, then install NEMS Linux to the integrated
-eMMC storage by typing:
+eMMC storage by typing;
 
 .. code-block:: console
 
     sudo nems-install
-
+    
 NEMS Linux Appliance
 --------------------
 

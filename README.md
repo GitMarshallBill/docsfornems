@@ -29,8 +29,30 @@ When embedding an image, please place the image in /img and use the following fo
 
   Caption goes here
 ```
+When adding an image inline with the text place the image in /img and use the following format
+
+```
+.. |image| image:: ../../img/image.png
+   :height: 2em
+```
 
 Image files need to be JPG or PNG. Sadly, ReadTheDocs doesn't appear to support WebP (they don't show up).
+
+#### Embed YouTube Video
+
+To embed a YouTube video, go to YouTube video page and click on **Share** below the video and then select **Embed**. 
+Copy the entire HTML tag with the <iframe> tag.
+In the rst file, type in
+
+```
+.. raw:: html
+   <iframe> code here
+```
+Ensure the iframe code lines up directly below the "r" in raw
+
+For pictorial instructions go here: <https://techwritingmatters.com/documenting-with-sphinx-tutorial-part-3-writing#6_Embedding_a_YouTube_video>
+
+
 
 #### Step-By-Step Instructions
 
