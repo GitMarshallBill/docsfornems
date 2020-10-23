@@ -47,17 +47,17 @@ Here's what you need to do:
 
 6. Create the backup config on your NEMS/nagiospi system. 
 
-   1. If on NEMS 1.0:
+If on NEMS 1.0:
 
 .. code-block:: console
 
-      cd /tmp/nems-migrator && ./backup.sh
+    cd /tmp/nems-migrator && ./backup.sh
 
-   2. If on nagiospi: 
+If on nagiospi: 
 
 .. code-block:: console
 
-      cd /tmp/nems-migrator && ./nagiospi2nems.sh
+    cd /tmp/nems-migrator && ./nagiospi2nems.sh
 
 7. Download the backup to your computer by opening it in your web
    browser. In your favorite web browser, simply add /backup/ to the end
