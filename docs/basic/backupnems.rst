@@ -80,4 +80,4 @@ Windows-Based Backup
 If you are on a Windows network and would like to include your
 backup.nems file in your nightly backup set, you may access it at
 \\nems.local\backup\backup.nems using your NEMS username and password
-as set in `nems-init <https://docs.nemslinux.com/commands/nems-init>`__.
+as set in `nems-init <https://docs2.nemslinux.com/en/latest/commands/nems-init.html>`__.
