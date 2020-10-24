@@ -38,8 +38,7 @@ NEMS Linux documentation, work in progress.
     basic/cloudservicesapi
     basic/commandlinetest
     basic/nemsnavigationmenu
-    basic/resolvednshostnamesonlan
-    basic/test    
+    basic/resolvednshostnamesonlan    
 
 
 .. toctree::
