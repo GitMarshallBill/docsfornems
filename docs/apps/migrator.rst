@@ -2,8 +2,8 @@
 NEMS Migrator
 ##############
 
-..raw:: html
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/oREK_PUhkAE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+.. raw:: html
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/oREK_PUhkAE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Introduction
 ------------
@@ -18,7 +18,7 @@ configuration, which can be backed up locally or in NEMS Cloud Services
 back online within minutes.
 
 Combined with `NEMS
-CheckIn <https://docs.nemslinux.com/features/checkin>`__ to notify you
+CheckIn <https://docs2.nemslinux.com/en/latest/nems-cloud-services/checkin.html?highlight=checkin>`__ to notify you
 in event of failure, NEMS Migrator is an excellent way to ensure your
 NEMS Server is protected against failure.
 
@@ -50,18 +50,18 @@ backup for up to 30 minutes.
 
 To use NEMS Migrator to upgrade from an earlier version of NEMS Linux
 (or even NagiosPi), please read `Upgrade NEMS Linux to Newer
-Version <https://docs.nemslinux.com/upgrade_instructions>`__.
+Version <https://docs2.nemslinux.com/en/latest/advanced/nemsupgrade.html>`__.
 
 To automate your NEMS Migrator backup, please see `Backup Your NEMS
 Configuration
-Automatically <https://docs.nemslinux.com/tips/backup_nems_automatically>`__ for
+Automatically <https://docs2.nemslinux.com/en/latest/basic/backupnems.html>`__ for
 helpful resources and tips.
 
 Restore
 ~~~~~~~
 
 Please
-see `nems-restore <https://docs.nemslinux.com/commands/nems-restore>`__.
+see `nems-restore <https://docs2.nemslinux.com/en/latest/commands/nems-restore.html?highlight=restore>`__.
 
 NEMS Cloud Backup
 -----------------
@@ -117,11 +117,3 @@ the following data will also be logged:
    backup
 -  **7** - How many daily backups are currently retained for your
    account
-
-.. _restore-1:
-
-Restore
--------
-
-Please
-see `nems-restore <https://docs.nemslinux.com/commands/nems-restore>`__.
