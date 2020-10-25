@@ -304,6 +304,10 @@ resolved the problem.
 “A general system error occurred: Server closed connection after 0
 response bytes read; <SSL…..
 
+.. figure:: ../../img/308-cim-general-system-error.png
+  :width: 600
+  :align: center
+  :alt: General System Error
 —
 
 **Q:** I have several ESXi hosts behind the same IP (NAT). How can I use
@@ -322,6 +326,10 @@ parameter you want in this case is ”-C“ (or –cimport).
 enable the CIM/WBEM services first, as they are disabled by default.
 Refer to https://kb.vmware.com/s/article/2148910.
 
+.. figure:: ../../img/308-cim-server-service.png
+  :width: 600
+  :align: center
+  :alt: CIM Server Service
 —
 
 **Q:** I can't execute the plugin and get the following error message.
