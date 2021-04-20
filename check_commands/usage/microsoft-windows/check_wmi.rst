@@ -83,7 +83,7 @@ On the monitored host machine, right-click on *My Computer*, and
 navigate to Manage \| Services and Applications \| WMI Control.
 
 .. figure:: ../../../img/wmi_windows_04.png
-  :width: 400
+  :width: 300
   :align: center
   :alt: WMI Control
 
