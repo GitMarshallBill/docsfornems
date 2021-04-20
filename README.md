@@ -1,7 +1,9 @@
 # nems-docs
 Documentation for NEMS Linux.
 
-This documentation will inevitably replace our tired old wiki. Currently, you can review the live version of this repository at https://docs2.nemslinux.com/
+You can review the live version of this repository at https://docs.nemslinux.com/
+
+[![Documentation Status](https://readthedocs.org/projects/nemslinux/badge/?version=latest)](https://docs.nemslinux.com/en/latest/?badge=latest)
 
 ## Helpful Resources
 
@@ -14,6 +16,17 @@ I'm actually new to Restructured Text, though I see similarities to some of the 
 ## Guidelines
 
 As I would like the documentation to have a consistent look throughout, please follow these guidelines for your edits. You are also welcome to add to these guidelines if you have a suggestion for certain layouts.
+
+### Compiling on ReadTheDocs
+
+When creating your own PR for testing, you can create a readthedocs.org accounta and have it pull from your repository. This is very helpful when testing layout and overall consistency, since directly compiling on Sphinx will likely turn up slightly different results.
+
+When setting up the project on readthedocs.org, the requirements file *must* be set in order for the project to compile.
+
+- After creating the project, open it within readthedocs.org
+- Click Admin > Advanced Settings
+- Scroll down to the section "Requirements File"
+- Set this to `requirements.txt`
 
 ### Layout
 
@@ -46,13 +59,30 @@ In the rst file, type in
 
 ```
 .. raw:: html
+
    <iframe> code here
 ```
 Ensure the iframe code lines up directly below the "r" in raw
 
 For pictorial instructions go here: <https://techwritingmatters.com/documenting-with-sphinx-tutorial-part-3-writing#6_Embedding_a_YouTube_video>
 
+#### Inline Text Variation
 
+Restructured Text *can* process inline text variations, but as ReST requires a space on either side, escaping is required.
+
+To achieve **r**estructured **t**ext you would type it as follows: `**r**\ estructured **t**\ ext`
+
+I've also included some custom css classes to allow doing things that are normally not possible with ReST, such as bold *and* italic at the same time.
+
+Just add this to the first line of your .rst file: `.. include:: ../global.rst`
+
+Then, you can do something like this: ``` **r**\ :bolditalic:`estructured` **t**\ :bolditalic:`ext` ```
+
+**Other Custom Classes**
+
+``` :underline:`text` ```
+
+Note that \ followed by a space will not actually render a space in the output.
 
 #### Step-By-Step Instructions
 
