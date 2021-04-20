@@ -21,8 +21,8 @@ This setup will **NOT** currently work for Windows 10 versions newer than v1909.
 **Configure WMI on the Windows end**
 
 In order for the agent to have access to query WMI to collect  and
-database metrics, the agent must have permission to access both DCOM and
-WMI.
+database metrics, the agent must have permission to access DCOM, 
+WMI and Performance Log.
 
 Verify that the Remote Registry, Server, and the Windows Management
 Instrumentation services are running.
@@ -87,9 +87,9 @@ navigate to Manage \| Services and Applications \| WMI Control.
   :align: center
   :alt: WMI Control
 
-1. Right-click WMI Control and click Properties.
-2. In the WMI Control Properties dialog box, click the Security tab.
-3. Expand the Root node and select CIMV2, then click Security.
+Right-click WMI Control and click Properties.
+In the WMI Control Properties dialog box, click the Security tab.
+Expand the Root node and select CIMV2, then click Security.
 
 .. figure:: ../../../img/wmi_windows_05.png
   :width: 400
@@ -114,10 +114,10 @@ Type in the user name and click **Check Names**.
 Grant the required permissions to the remote user by enabling the
 following check boxes in the Allow column:
 
-1. Execute Methods
-2. Enable Account
-3. Remote Enable
-4. Read Security
+A. Execute Methods
+B. Enable Account
+C. Remote Enable
+D. Read Security
 
 .. figure:: ../../../img/wmi_windows_08.png
   :width: 400
@@ -128,6 +128,9 @@ following check boxes in the Allow column:
   :width: 400
   :align: center
   :alt: Remote Enable and Read Security
+
+While still in Computer Management, expand System Tools, expand Local Users and Groups then click on Groups.
+Right click on Performance Log Users and click Add to Group
 
 **To grant DCOM permissions to a remote user**
 
