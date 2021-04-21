@@ -88,8 +88,8 @@ navigate to Manage \| Services and Applications \| WMI Control.
   :alt: WMI Control
 
 -  Right-click WMI Control and click Properties.
-- In the WMI Control Properties dialog box, click the Security tab.
-- Expand the Root node and select CIMV2, then click Security.
+-  In the WMI Control Properties dialog box, click the Security tab.
+-  Expand the Root node and select CIMV2, then click Security.
 
 .. figure:: ../../../img/wmi_windows_05.png
   :width: 400
@@ -128,6 +128,15 @@ following check boxes in the Allow column:
   :width: 400
   :align: center
   :alt: Remote Enable and Read Security
+
+While still in Computer Management
+
+-  Expand System Tools
+-  Expand Local Users and Groups
+-  Click Groups
+-  Right click Performance Log Users
+-  Click Add to Group
+
 
 **To grant DCOM permissions to a remote user**
 
