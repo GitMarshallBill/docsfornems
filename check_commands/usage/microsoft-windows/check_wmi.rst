@@ -169,8 +169,8 @@ WMI.
    Component Services \| Computers \| My Computer.
 -  Right-click **My Computer** and click **Properties**.
 -  Select the **Default Properties** tab.
--  To enable DCOM, select the *Enable Distributed COM on this
-   computer* checkbox.
+-  To enable DCOM, select the **Enable Distributed COM on this
+   computer** checkbox.
 -  Click **Apply**.
 
 .. figure:: ../../../img/wmi_windows_10.png
@@ -178,18 +178,18 @@ WMI.
   :align: center
   :alt: Enable Distributed COM
 
--  In the My Computer Properties dialog box, click the COM Security tab.
--  Under Access Permissions, click Edit Limits. 
+-  In the My Computer Properties dialog box, click the **COM Security** tab.
+-  Under Access Permissions, click **Edit Limits**. 
 -  In the Access Permission dialog box, add the user or group name
    necessary for the remote user.
--  Ensure Local Access and Remote Access are checked and click OK
+-  Ensure Local Access and Remote Access are checked and click **OK**
 
 .. figure:: ../../../img/wmi_windows_11.png
   :width: 500
   :align: center
   :alt: COM Security
 
--  In the Launch and Activation Permissions area, click Edit Limits.
+-  In the Launch and Activation Permissions area, click **Edit Limits**.
 -  In the Launch and Activation Permission dialog box, add the user or group name
    necessary for the remote user.
 -  Grant the remote user all the permissions available in the Permissions
