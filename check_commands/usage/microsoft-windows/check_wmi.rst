@@ -87,9 +87,9 @@ navigate to Manage \| Services and Applications \| WMI Control.
   :align: center
   :alt: WMI Control
 
-1. Right-click WMI Control and click Properties.
-2. In the WMI Control Properties dialog box, click the Security tab.
-3. Expand the Root node and select CIMV2, then click Security.
+-  Right-click WMI Control and click Properties.
+- In the WMI Control Properties dialog box, click the Security tab.
+- Expand the Root node and select CIMV2, then click Security.
 
 .. figure:: ../../../img/wmi_windows_05.png
   :width: 400
