@@ -129,18 +129,18 @@ On the monitored host machine
 
 While still in Computer Management
 
--  Expand System Tools
--  Expand Local Users and Groups
--  Click Groups
--  Right click Performance Log Users
--  Click Add to Group
+-  Expand **System Tools**
+-  Expand **Local Users and Groups**
+-  Click **Groups**
+-  Right click **Performance Log Users**
+-  Click **Add to Group**
 
 .. figure:: ../../../img/PerfLogUsers.png
   :width: 500
   :align: center
   :alt: Performance Log Users Add to Group
 
--  Click Add
+-  Click **Add**
 
 .. figure:: ../../../img/PerfLogUsersAdd.png
   :width: 400
