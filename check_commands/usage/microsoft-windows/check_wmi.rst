@@ -79,23 +79,23 @@ WMI.
 On the monitored host machine
  
 -  Right-click on *This PC*
--  Navigate to Manage \| Services and Applications \| WMI Control.
+-  Navigate to Manage, Services and Applications,  WMI Control.
 
 .. figure:: ../../../img/wmi_windows_04.png
   :width: 300
   :align: center
   :alt: WMI Control
 
--  Right-click WMI Control and click Properties.
--  In the WMI Control Properties dialog box, click the Security tab.
--  Expand the Root node and select CIMV2, then click Security.
+-  Right-click **WMI Control** and click **Properties**.
+-  In the WMI Control Properties dialog box, click the **Security** tab.
+-  Expand the Root node and select **CIMV2**, then click **Security**.
 
 .. figure:: ../../../img/wmi_windows_05.png
   :width: 400
   :align: center
   :alt: CIMV2
 
--  Select the user in the *Group or user names* box. If not listed select **Add**.
+-  Select the user in the **Group or user names** box. If not listed select **Add**.
 
 .. figure:: ../../../img/wmi_windows_06.png
   :width: 400
@@ -134,6 +134,29 @@ While still in Computer Management
 -  Right click Performance Log Users
 -  Click Add to Group
 
+.. figure:: ../../../img/PerfLogUsers.png
+  :width: 400
+  :align: center
+  :alt: Performance Log Users Add to Group
+
+-  Click Add
+
+.. figure:: ../../../img/PerfLogUsersAdd.png
+  :width: 400
+  :align: center
+  :alt: Click Add
+
+-  Type in the username and click **Check Names**
+
+.. figure:: ../../../img/PerfLogUsersCheck.png
+  :width: 400
+  :align: center
+  :alt: Check Names
+
+- Click **OK**
+-  Click **Apply**
+-  Click **OK** to close dialog box
+-  Close **Computer Management** window
 
 **To grant DCOM permissions to a remote user**
 
