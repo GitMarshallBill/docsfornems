@@ -104,12 +104,13 @@ On the monitored host machine
   :alt: Add User to CIMV2
 
 -  Type in the user name and click **Check Names**.
--  Click **OK**
 
 .. figure:: ../../../img/wmi_windows_07.png
   :width: 350
   :align: center
   :alt: Check Names
+
+-  Click **OK**
 
 -  Grant the required permissions to the remote user by enabling the following check boxes in the Allow column:
 
