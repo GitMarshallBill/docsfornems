@@ -79,7 +79,8 @@ WMI.
 On the monitored host machine
  
 -  Right-click on **This PC**
--  Navigate to Manage  →  Services and Applications,  →  WMI Control.
+-  Click **Manage**
+-  Navigate to  Services and Applications,  →  WMI Control.
 
 .. figure:: ../../../img/wmi_windows_04.png
   :width: 300
