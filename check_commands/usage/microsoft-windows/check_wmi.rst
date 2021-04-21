@@ -109,8 +109,7 @@ On the monitored host machine
   :align: center
   :alt: Check Names
 
--  Grant the required permissions to the remote user by enabling the
-following check boxes in the Allow column:
+-  Grant the required permissions to the remote user by enabling the following check boxes in the Allow column:
 
 1. Execute Methods
 2. Enable Account
@@ -141,36 +140,36 @@ While still in Computer Management
 This limits users other than those configured from remotely accessing
 WMI.
 
-1. On the monitored host machine, at the Windows Run prompt,
+-  On the monitored host machine, at the Windows Run prompt,
    type *DCOMCNFG* and press Enter.
-2. In the Component Services dialog box that opens, navigate to
+-  In the Component Services dialog box that opens, navigate to
    Component Services \| Computers \| My Computer.
-3. Right-click **My Computer** and click **Properties**.
-4. Select the **Default Properties** tab.
-5. To enable DCOM, select the *Enable Distributed COM on this
+-  Right-click **My Computer** and click **Properties**.
+-  Select the **Default Properties** tab.
+-  To enable DCOM, select the *Enable Distributed COM on this
    computer* checkbox.
-6. Click **Apply**.
+-  Click **Apply**.
 
 .. figure:: ../../../img/wmi_windows_10.png
   :width: 400
   :align: center
   :alt: Enable Distributed COM
 
-1. In the My Computer Properties dialog box, click the COM Security tab.
-2. Under Access Permissions, click Edit Limits. 
-3. In the Access Permission dialog box, add the user or group name
+-  In the My Computer Properties dialog box, click the COM Security tab.
+-  Under Access Permissions, click Edit Limits. 
+-  In the Access Permission dialog box, add the user or group name
    necessary for the remote user.
-4. Ensure Local Access and Remote Access are checked and click OK
+-  Ensure Local Access and Remote Access are checked and click OK
 
 .. figure:: ../../../img/wmi_windows_11.png
   :width: 500
   :align: center
   :alt: COM Security
 
-5. In the Launch and Activation Permissions area, click Edit Limits.
-6. In the Launch and Activation Permission dialog box, add the user or group name
+-  In the Launch and Activation Permissions area, click Edit Limits.
+-  In the Launch and Activation Permission dialog box, add the user or group name
    necessary for the remote user.
-7. Grant the remote user all the permissions available in the Permissions
+-  Grant the remote user all the permissions available in the Permissions
    for Administrators area by enabling all of the check boxes in the Allow
    column.
 
@@ -179,16 +178,16 @@ WMI.
   :align: center
   :alt: Permissions
 
-8. Click **OK** and/or **Yes** to close the dialog boxes.
+-  Click **OK** and/or **Yes** to close the dialog boxes.
 
 **Enable Classic Security policies for Windows Systems that are not part
 of a domain.**
 
-1. Open the Control panel, and go to *Administrative Tools* → *Local
+-  Open the Control panel, and go to *Administrative Tools* → *Local
    Security Policy*.
-2. The Local Security Settings window appears.
-3. Go to *Local Policies* → *Security Options*.
-4. Change the value of *Network access: Sharing and security model for
+-  The Local Security Settings window appears.
+-  Go to *Local Policies* → *Security Options*.
+-  Change the value of *Network access: Sharing and security model for
    local accounts.* to **Classic**.
 
 .. figure:: ../../../img/wmi_windows_13.png
@@ -220,7 +219,7 @@ Basic Configuration of Windows Devices In NEMS Linux Using WMI Check Commands
 
 **Adding check_win_xxxx Commands in Advanced Services**
 
-A) In NEMS NConf click the *Add* button next to *Advanced Services*.
+1. In NEMS NConf click the *Add* button next to *Advanced Services*.
 Then click the drop-down arrow in the *check command* select list, and
 scroll down to the check_win\_\ *xxx* commands to choose the command you
 wish to add.
@@ -230,11 +229,11 @@ wish to add.
   :align: center
   :alt: Add advanced service
 
-B) Configure the required fields and be sure to assign the Advanced
+2. Configure the required fields and be sure to assign the Advanced
 Service to your Windows host. Then click *Submit*. You will see your new
 command in the list of available Advanced Services.
 
-Repeat Steps A and B above as needed to add any further
+Repeat Steps 1 and 2 above as needed to add any further
 check_win\_\ *xxx* services you require.
 
 When complete these commands will now be available in the *Advanced
