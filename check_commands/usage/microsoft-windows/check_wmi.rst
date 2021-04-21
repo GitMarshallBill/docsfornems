@@ -79,7 +79,8 @@ WMI.
 
 .. note:: In the following example, replace "remoteuser" with the username of the user created on your Windows hosts.
 
-On the monitored host machine, 
+On the monitored host machine
+ 
 -  Right-click on *My Computer*
 -  Navigate to Manage \| Services and Applications \| WMI Control.
 
