@@ -79,7 +79,7 @@ WMI.
 On the monitored host machine
  
 -  Right-click on **This PC**
--  Navigate to Manage, Services and Applications,  WMI Control.
+-  Navigate to Manage  →  Services and Applications,  →  WMI Control.
 
 .. figure:: ../../../img/wmi_windows_04.png
   :width: 300
@@ -135,7 +135,7 @@ While still in Computer Management
 -  Click Add to Group
 
 .. figure:: ../../../img/PerfLogUsers.png
-  :width: 400
+  :width: 500
   :align: center
   :alt: Performance Log Users Add to Group
 
@@ -166,7 +166,7 @@ WMI.
 -  On the monitored host machine, at the Windows Run prompt,
    type *DCOMCNFG* and press Enter.
 -  In the Component Services dialog box that opens, navigate to
-   Component Services \| Computers \| My Computer.
+   Component Services  →  Computers  →  My Computer.
 -  Right-click **My Computer** and click **Properties**.
 -  Select the **Default Properties** tab.
 -  To enable DCOM, select the **Enable Distributed COM on this
