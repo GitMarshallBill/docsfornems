@@ -37,7 +37,7 @@ Instrumentation services are running.
 
 
 By default even if the Remote Registry service is started Windows 7 and
-above systems will deny remote access to the registry.
+later systems will deny remote access to the registry.
 
 -  Scroll down to the *Server* service. Verify that the service is
    started and set to **Automatic**.
@@ -65,6 +65,7 @@ for a remote user.**
 -  Local user account on the target computer must have explicit DCOM and
    WMI namespace access rights granted specifically for remote
    connections.
+-  User must also be a memeber of the Performance Log Users group.   
 -  Local security policies must be enabled for “Classic - local users
    authenticate as themselves
 
@@ -94,8 +95,7 @@ On the monitored host machine
   :align: center
   :alt: CIMV2
 
--  Select the user in the *Group or user names* box. If not listed
-select **Add**.
+-  Select the user in the *Group or user names* box. If not listed select **Add**.
 
 .. figure:: ../../../img/wmi_windows_06.png
   :width: 400
