@@ -79,8 +79,9 @@ WMI.
 
 .. note:: In the following example, replace "remoteuser" with the username of the user created on your Windows hosts.
 
-On the monitored host machine, right-click on *My Computer*, and
-navigate to Manage \| Services and Applications \| WMI Control.
+On the monitored host machine, 
+-  Right-click on *My Computer*
+-  Navigate to Manage \| Services and Applications \| WMI Control.
 
 .. figure:: ../../../img/wmi_windows_04.png
   :width: 300
@@ -96,7 +97,7 @@ navigate to Manage \| Services and Applications \| WMI Control.
   :align: center
   :alt: CIMV2
 
-Select the user in the *Group or user names* box. If not listed
+-  Select the user in the *Group or user names* box. If not listed
 select **Add**.
 
 .. figure:: ../../../img/wmi_windows_06.png
@@ -104,14 +105,14 @@ select **Add**.
   :align: center
   :alt: Add User to CIMV2
 
-Type in the user name and click **Check Names**.
+-  Type in the user name and click **Check Names**.
 
 .. figure:: ../../../img/wmi_windows_07.png
   :width: 400
   :align: center
   :alt: Check Names
 
-Grant the required permissions to the remote user by enabling the
+-  Grant the required permissions to the remote user by enabling the
 following check boxes in the Allow column:
 
 1. Execute Methods
