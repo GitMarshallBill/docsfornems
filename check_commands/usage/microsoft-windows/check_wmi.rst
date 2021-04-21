@@ -136,7 +136,7 @@ While still in Computer Management
 -  Click Add to Group
 
 .. figure:: ../../../img/PerfLogUsers.png
-  :width: 600
+  :width: 500
   :align: center
   :alt: Performance Log Users Add to Group
 
