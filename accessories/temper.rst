@@ -33,25 +33,113 @@ Buy TEMPer Thermal Sensor
 Supported Devices
 -----------------
 
-Support is provided via `temper <https://github.com/urwen/temper>`__.
+Support was originally provided by `urwen <https://github.com/urwen/temper>`__. In NEMS Linux 1.6, support was initially moved to the more up-to-date repository from `ccwienk <https://github.com/ccwienk/temper>`__ (adds several of the newer TEMPer devices) but then forked to `NEMSLinux <https://github.com/NEMSLinux/temper>`__ to add support for TEMPerGold_V3.3 firmware (and others in the future).
 
 NEMS Linux includes support for TEMPer temperature and humidity sensor data. This table also shows which have internal or external sensors. NEMS Linux will always opt for external sensor data, if present.
 
-+------------+-----------+-----------------+------+-----+-----+-----+
-| Product    | Id        | Firmware        | Temp | Hum | Int | Ext |
-+============+===========+=================+======+=====+=====+=====+
-| TEMPer     | 0c45:7401 | TEMPerF1.4      | ✔    | ✘   | ✔   | ✘   |
-+------------+-----------+-----------------+------+-----+-----+-----+
-| TEMPer     | 413d:2107 | TEMPerGold_V3.1 | ✔    | ✘   | ✔   | ✘   |
-+------------+-----------+-----------------+------+-----+-----+-----+
-| TEMPerHUM  | 413d:2107 | TEMPerX_V3.1    | ✔    | ✔   | ✔   | ✘   |
-+------------+-----------+-----------------+------+-----+-----+-----+
-| TEMPer2    | 413d:2107 | TEMPerX_V3.3    | ✔    | ✘   | ✔   | ✔   |
-+------------+-----------+-----------------+------+-----+-----+-----+
-| TEMPer1F   | 413d:2107 | TEMPerX_V3.3    | ✔    | ✘   | ✘   | ✔   |
-+------------+-----------+-----------------+------+-----+-----+-----+
-| TEMPerX232 | 1a86:5523 | TEMPerX232_V2.0 | ✔    | ✔   | ✔   | ✔   |
-+------------+-----------+-----------------+------+-----+-----+-----+
+.. list-table:: List of Supported TEMPer Devices
+   :header-rows: 1
+
+   * - Product
+     - ID
+     - Firware
+     - Temp
+     - Hum
+     - Int
+     - Ext
+   * - TEMPer
+     - 0c45:7401
+     - TEMPerF1.4
+     - ✔
+     - ✘
+     - ✔
+     - ✘
+   * - TEMPer
+     - 413d:2107
+     - TEMPerGold_V3.1
+     - ✔
+     - ✘
+     - ✔
+     - ✘
+   * - TEMPer
+     - 1a86:e025
+     - TEMPerGold_V3.3
+     - ✔
+     - ✘
+     - ✔
+     - ✘
+   * - TEMPer
+     - 1a86:e025
+     - TEMPerGold_V3.4
+     - ✔
+     - ✘
+     - ✔
+     - ✘
+   * - TEMPerHUM
+     - 413d:2107
+     - TEMPerX_V3.1
+     - ✔
+     - ✔
+     - ✔
+     - ✘
+   * - TEMPerHUM
+     - 1a86:e025
+     - TEMPerHUM_3.9
+     - ✔
+     - ✔
+     - ✔
+     - ✘
+   * - TEMPer2
+     - 413d:2107
+     - TEMPerX_V3.3
+     - ✔
+     - ✘
+     - ✔
+     - ✔
+   * - TEMPer2
+     - 413d:2107
+     - TEMPer2_V3.7
+     - ✔
+     - ✘
+     - ✔
+     - ✔
+   * - TEMPer2
+     - 1a86:e025
+     - TEMPer2_V3.9
+     - ✔
+     - ✘
+     - ✔
+     - ✔
+   * - TEMPer2
+     - 1a86:e025
+     - TEMPer2_M12_V1.3
+     - ✔
+     - ✘
+     - ✔
+     - ✔
+   * - TEMPer1F
+     - 413d:2107
+     - TEMPerX_V3.3
+     - ✔
+     - ✘
+     - ✘
+     - ✔
+   * - TEMPerX232
+     - 1a86:5523
+     - TEMPerX232_V2.0
+     - ✔
+     - ✔
+     - ✔
+     - ✔
+   * - TEMPer1V1.1
+     - 0c45:7401
+     - TEMPer1F1.1Per1F
+     - ✔
+     - ✔
+     - ✘
+     - ✔
+
+**Temp:** Device contains thermal sensor. **Hum:** Device contains humidity sensor. **Int:** Device uses an internal sensor built into the device. **Ext:** Device supports use of an external sensor probe.
 
 Terminal Output
 ---------------
@@ -101,6 +189,13 @@ Calibration
 
 As of NEMS Linux 1.6, both the thermal sensor and humidity sensor can be calibrated within NEMS SST to ensure the highest level of accuracy.
 
+.. figure:: ../img/temper-calibration-in-nems-sst.png
+  :width: 600
+  :align: center
+  :alt: TEMPer Sensor Calibration in NEMS SST
+
+  TEMPer Sensor Calibration in NEMS SST
+  
 External vs. Internal Sensors
 -----------------------------
 

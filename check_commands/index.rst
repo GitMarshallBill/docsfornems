@@ -13,8 +13,15 @@ here are some of the available check commands:
    Monitor the hardware of ESX and ESXi servers.
 -  `check_http <check_http.html>`__ -
    Check the status of an HTTP/HTTPS server on a remote host.
+-  `check_ilo2_health <check_ilo2_health.html>`__ -
+   Check hardware health of HP Proliant Servers by querying the HPE
+   Integrated Lights-Out (iLO) 2/3/4/5 Management Controller.
 -  `check_internet_speed <check_internet_speed.html>`__ -
    Check the speed of your internet connection.
+-  `check_iperf <check_iperf3.html>`__ -
+   Monitor the speed between network links using the `iperf` command.
+-  `check_iperf3 <check_iperf3.html>`__ -
+   Monitor the speed between network links using the `iperf3` command.
 -  `check_mikrotik_switch <check_mikrotik.html>`__ -
    Monitor stats for some MikroTik routers, including thermal sensors,
    packet loss, uptime, and so-on.
@@ -49,6 +56,7 @@ here are some of the available check commands:
    a remote system via NRPE.
 -  `check_1wire_temp <check_1wire_temp.html>`__ - Monitor temperature using a 1-wire device such as the DS18S20.
 -  `check_tasmota <check_tasmota.html>`__ - SONOFF / Tasmota IoT device monitoring.
+-  `check_truepool <check_truepool.html>`__ - Check the status of your Chia farm on the Truepool.io pool.
 -  `check_ibmi* <check_ibmi.html>`__ - IBM i monitoring using Nagios i.
 
 .. toctree::
@@ -75,4 +83,5 @@ here are some of the available check commands:
     custom_check_mem
     check_1wire_temp
     check_tasmota
+    check_truepool
     check_ibmi
