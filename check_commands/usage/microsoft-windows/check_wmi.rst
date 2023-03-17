@@ -11,6 +11,8 @@ hosts.
 Disabled by default, WMI requires some configuration before NEMS Linux
 can monitor the Windows host.
 
+.. Warning:: Microsoft is making changes that will make agentless monitoring of Windows hosts impossible. Windows 10 version 2004 and newer has already broken WMI from Linux, and Windows Server is next. I am working hard to ensure WMIC is updated to accommodate these changes. Currently these instructions will work for Windows 10 devices but ONLY on the Virtual Applaince platform. Please watch for updates regarding other platforms.
+
 Setting up WMI
 --------------
 
@@ -65,9 +67,9 @@ for a remote user.**
 -  Local user account on the target computer must have explicit DCOM and
    WMI namespace access rights granted specifically for remote
    connections.
--  User must also be a memeber of the Performance Log Users group.   
--  Local security policies must be enabled for “Classic - local users
-   authenticate as themselves
+-  User must also be a member of the *Performance Log Users* group   
+-  Local security policies must be enabled for *Classic - local users
+   authenticate as themselves*
 
 **Grant minimal WMI permissions to the remote user**
 
@@ -77,19 +79,19 @@ WMI.
 .. note:: In the following example, replace "remoteuser" with the username of the user created on your Windows hosts.
 
 On the monitored host machine
- 
+
 -  Right-click on **This PC**
 -  Click **Manage**
--  Navigate to  Services and Applications,  →  WMI Control.
+-  Navigate to  *Services and Applications*  →  *WMI Control*
 
 .. figure:: ../../../img/wmi_windows_04.png
   :width: 250
   :align: center
   :alt: WMI Control
 
--  Right-click **WMI Control** and click **Properties**.
--  In the WMI Control Properties dialog box, click the **Security** tab.
--  Expand the Root node and select **CIMV2**, then click **Security**.
+-   Right-click **WMI Control** and click **Properties**
+-   In the WMI Control Properties dialog box, click the **Security** tab.
+-   Expand the Root node and select **CIMV2**, then click **Security**
 
 .. figure:: ../../../img/wmi_windows_05.png
   :width: 350
@@ -103,14 +105,14 @@ On the monitored host machine
   :align: center
   :alt: Add User to CIMV2
 
--  Type in the user name and click **Check Names**.
+-  Type in the user name and click **Check Names**
 
 .. figure:: ../../../img/wmi_windows_07.png
   :width: 350
   :align: center
   :alt: Check Names
 
--  Click **OK**
+-  Click **OK** 
 
 -  Grant the required permissions to the remote user by enabling the following check boxes in the Allow column:
 
@@ -156,65 +158,63 @@ While still in Computer Management
   :align: center
   :alt: Check Names
 
-- Click **OK**
+-  Click **OK**
 -  Click **Apply**
 -  Click **OK** to close dialog box
--  Close **Computer Management** window
+-  Close **Computer Management** window  
 
 **To grant DCOM permissions to a remote user**
 
-This limits users other than those configured from remotely accessing
-WMI.
 
--  On the monitored host machine, at the Windows Run prompt,
-   type *DCOMCNFG* and press Enter.
--  In the Component Services dialog box that opens, navigate to
-   Component Services  →  Computers  →  My Computer.
--  Right-click **My Computer** and click **Properties**.
--  Select the **Default Properties** tab.
--  To enable DCOM, select the **Enable Distributed COM on this
-   computer** checkbox.
--  Click **Apply**.
+-   On the monitored host machine, at the Windows Run prompt,
+    type *DCOMCNFG* and press Enter.
+-   In the Component Services dialog box that opens, navigate to
+    *Component Services* → *Computers* → *My Computer*.
+-   Right-click **My Computer** and click **Properties**.
+-   Select the **Default Properties** tab.
+-   To enable DCOM, select the **Enable Distributed COM on this
+    computer** checkbox.
+-   Click **Apply**.
 
 .. figure:: ../../../img/wmi_windows_10.png
   :width: 350
   :align: center
   :alt: Enable Distributed COM
 
--  In the My Computer Properties dialog box, click the **COM Security** tab.
--  Under Access Permissions, click **Edit Limits**. 
--  In the Access Permission dialog box, add the user or group name
-   necessary for the remote user.
--  Ensure Local Access and Remote Access are checked and click **OK**
+-   In the *My Computer* Properties dialog box, click the **COM Security** tab.
+-   Under Access Permissions, click **Edit Limits**. 
+-   In the Access Permission dialog box, add the user or group name
+    necessary for the remote user.
+-   Ensure Local Access and Remote Access are checked and click **OK**
 
 .. figure:: ../../../img/wmi_windows_11.png
   :width: 500
   :align: center
   :alt: COM Security
 
--  In the Launch and Activation Permissions area, click **Edit Limits**.
--  In the Launch and Activation Permission dialog box, add the user or group name
-   necessary for the remote user.
--  Grant the remote user all the permissions available in the Permissions
-   for Administrators area by enabling all of the check boxes in the Allow
-   column.
+-   In the Launch and Activation Permissions area, click **Edit Limits**.
+-   In the Launch and Activation Permission dialog box, add the user or group name
+    necessary for the remote user.
+-   Grant the remote user all the permissions available in the Permissions
+    for Administrators area by enabling all of the check boxes in the Allow
+    column.
 
 .. figure:: ../../../img/wmi_windows_12.png
   :width: 500
   :align: center
   :alt: Permissions
 
--  Click **OK** and/or **Yes** to close the dialog boxes.
+-   Click **OK** and/or **Yes** to close the dialog boxes.
 
 **Enable Classic Security policies for Windows Systems that are not part
 of a domain.**
 
--  Open the Control panel, and go to *Administrative Tools* → *Local
-   Security Policy*.
--  The Local Security Settings window appears.
--  Go to *Local Policies* → *Security Options*.
--  Change the value of *Network access: Sharing and security model for
-   local accounts.* to **Classic**.
+-   Open the Control panel, and go to *Administrative Tools* → *Local
+    Security Policy*.
+-   The Local Security Settings window appears.
+-   Go to *Local Policies* → *Security Options*.
+-   Change the value of *Network access: Sharing and security model for
+    local accounts.* to **Classic**.
 
 .. figure:: ../../../img/wmi_windows_13.png
   :width: 600

@@ -4,31 +4,23 @@ NEMS Linux 1.6 Changelogs
 The NEMS 1.6 release cycle will focus on hardware porting and
 peripherals.
 
+**Release Dates:**
+
+- NEMS Linux 1.6 Alpha was released to the beta team December 2020.
+- NEMS Linux 1.6 Beta and NEMSeOS 0.1 Alpha Build 2 were released to Patrons May 21, 2021.
+- NEMS Linux 1.6 Public Release to be announced, likely mid-late July/early August 2021.
+
 **Key Development Features and Goals:**
 
--  Python moved to v3 stack due to 2.7 EOL.
--  Public release of `NEMS Warning Light`_.
--  check_mk livestatus upgraded to 1.5 (requires C++17).
+-  Public release of `NEMS Warning Light </en/latest/nems-tools/warninglight.html>`__.
+-  Public release of NEMS Extender OS.
+-  Updated packages.
 -  Supported single board computer list to be reduced to focus on most
    used, with option for users to request ports if they do not exist.
 -  Port NEMS Linux to Docker platform. Development funding provided by
    Patrons (THANK YOU).
--  **Firewall** - NEMS Linux to include `ConfigServer Security &
-   Firewall (csf) with Login Failure Daemon (lfd)`_. Internal LAN IP
-   addresses are whitelisted by default, but if a user tries to access
-   your NEMS server from outside the LAN (ie., if you have your NEMS
-   server accessible on the Internet) they will get locked out if they
-   try an incorrect password too many times.
--  Add IPMI (freeipmi) if not added already.
--  Begin work on smart home assistant integration: NEMS Skill for Alexa
-   and Google Assistant.
 -  Consistent networking configuration across platform (for setting
    static IPs, for example).
-
-**Release Dates:**
-
-NEMS Linux 1.6 Alpha was released December 2020.
-Beta release is planned for January 2021 with the public release to follow in Q1 2021.
 
 **Development Changelogs Since 1.5:**
 
@@ -290,3 +282,47 @@ March-April 2021
 - Several compatibility fixes added to the nems-speedtest patch (000015) to ensure backward compatibility with as many NEMS Servers as possible.
 - Continued work on WMIC, which has posed challenges in porting across platform.
 - Launched new NEMS Linux repository for 1.6. By doing so, I plan to compile WMIC on each architecture and then be able to install via apt, rather than going through so much trouble compiling from scratch on every single board. Inevitably this will also mean moving all NEMS packages off github (as far as how NEMS Servers obtain the code) and instead maintain a single apt repository. This could mean much easier cross-platform support from my perspective, and faster adoption of updates across all boards.
+- Modified the speedtest script to wait 100 seconds for the task to finish and then forcibly kill it. If this happens, NEMS will report "0 Error" instead of a speed result. By doing this, I prevent slower connections from having the speedtest check killed by Nagios (service timeout) leaving a compounding number of Chromium tasks running, eventually leading to high load and slow operation.
+- Upgrade CheckMK to 1.6.0p23 and move source to Github (rather than a zip from their site, which became deadlink after a recent redesign).
+
+May-July 2021
+
+- Clean up a lot of the old build scripts and nems-upgrade packages to accommodate the changes in NEMS Linux 1.6.
+- Deprecation of Samba wmic complete: NEMS Linux 1.6 now entirely moved to new custom Python replacement.
+- Upgrade Nagios to 4.4.6.
+- Move Nagios configuration base to 1.6.
+- Remove deprecated Speedtest Server output from NEMS Server Overview.
+- Use the new hw-detect (32-bit or 64-bit) system rather than hw_model (32-bit only) in preparation for future 64-bit release (1.7).
+- Added `check_by_ssh` check command to sample database as `requested by AlphaPiAlpha <https://discord.com/channels/501816361706717184/544881728460816385/840160182452748288>`__.
+- Small fix to prevent changelog duplication in the nemsadmin home folder.
+- Checkboxes have been missing from NEMS NConf for quite some time, since upgrading JQuery to a more current version. This has been fixed by adapting the code to changes in the JQuery-UI widget callbacks.
+- Moved 9590, hw-detect, nems-migrator, nems-scripts, nems-www and wmic to dpkg repository.
+- Adapted nems-update to upgrade all possible apps via apt-get rather than git.
+- Stripped out a lot of legacy code from NEMS Migrator and NEMS Scripts.
+- Reworked NEMS Migrator's MySQL base settings. Now take significantly less space.
+- Moved NEMS Merch store to https://shop.nemslinux.com/
+- Upgraded NRPE to 4.0.3.
+- The file `check_rpi_temperature` has been renamed to match its check command, `check_sbc_temperature` since it was upgraded to support more than just RPi a while ago.
+- Include Fahrenheit instead of just Celsius in check_sbc_temperature / NRPE CPU temperature check `as per tripled <https://discord.com/channels/501816361706717184/654697565937205278/714953695783026840>`__
+- Moved all included Nagios check command plugins to nems-plugins package on the DPKG Repository to ease the update process should fixes or new features be implemented down the road.
+- Upgrade check_ncpa.py to 1.2.4.
+- Add NCPA sample check_commands to NEMS NConf `as per joeluzzi <https://discord.com/channels/501816361706717184/654697565937205278/779073216051150868>`__: check_ncpa_mem (Memory Usage) and check_ncpa_processes (Running Processes).
+- Update boot for USB boot on Raspberry Pi `as per Kevin Shumaker <https://www.youtube.com/watch?v=5SlgWl7u1Fw&lc=Ugyi8p9iDQ67vPe5ohp4AaABAg>`__.
+- Add 1-Wire Temperature Check `as per jtoland <https://discord.com/channels/501816361706717184/654697565937205278/785477192892940338>`__.
+- Add SONOFF / Tasmota IoT device monitoring `as per AndroBuilder <https://discord.com/channels/501816361706717184/654697565937205278/810547542076424232>`__.
+- All speedtest commands have now been re-written (again). The fast.com fix from the end of 1.5.x to replace Ookla was heavy (required a headless Chromium task), sometimes unreliable and didn't work on all platforms. So I've re-written the system entirely, now using `Cloudflare's Speedtest <https://speed.cloudflare.com/>`__ to test the Internet connection speed. The results are cached for 2 minutes, so if a user accidentally runs multiple instances, it will not bottleneck nor give incorrect results due to high bandwidth usage.
+- Nagios i fully integrated, along with check commands for IBM i platform `as requested by chris_hird <https://discord.com/channels/501816361706717184/654697565937205278/798658298512932955>`__.
+- IBM i integration may now be enabled in NEMS SST under optional services. It is disabled by default since it requires an additional daemon be running.
+- Add option to NEMS SST for "disabled by default" optional services that must be enabled manually.
+- Adapt NRPE configuration to support newly named check_sbc_temperature script.
+- Direct NEMS Linux to pull the NRPE config file from NEMS Migrator package rather than downloading from Github (as would be the case when installing on a non-NEMS system).
+- **NEMS Linux 1.6 Beta Build 1 released to Patrons.**
+- **NEMSeOS 0.1 Alpha Build 2 released to Patrons.**
+- Update fk_id for NEMS Migrator restore, and temporarily disable nems-restore feature until more testing can be done.
+- Remove state text (UNKNOWN, WARN, CRITICAL, OK) from check_nems_osb - let the output be based on the exit codes. Also change date output to show full day, not 3-character short-form.
+- Add nems-plugins to nems-update procedure.
+- Remove NEMS Hardware ID from RPi-Monitor. Thanks to UltimateBugHunter-NitPicker for pointing this out. NEMS Server Overview is the correct place to get this now.
+- Add NEMS Server's platform name to RPi-Monitor.
+- Temporarily reverted NRPE host installer to 1.5.x compatibility since 1.6 uses a newer version of NRPE. Thanks to smccloud for `pointing this out <https://discord.com/channels/501816361706717184/501816361706717186/850014385896423426>`__.
+- Added `libnumber-format-perl` as a dependency for wmic package.
+- Improved the error output of `check_mrtgtraf_nems` after `PixelSlayer Bob reported <https://discord.com/channels/501816361706717184/501816361706717186/852112905562488832>`__ messy error output.

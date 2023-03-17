@@ -16,7 +16,7 @@ case a beautiful choice for your Raspberry Pi 4-based NEMS Server.
 The Argon ONE active cooling fan is controlled via I2C, and the fan
 speed varies based on how hot the Raspberry Pi SOC is. The power button
 on the Argon ONE triggers a safe software shutdown on the Raspberry Pi,
-as if you had typed *shutdown now -h*
+as if you had typed *shutdown now -h*
 
 Requirements
 ------------
