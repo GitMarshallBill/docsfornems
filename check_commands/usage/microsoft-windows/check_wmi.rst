@@ -11,8 +11,7 @@ hosts.
 Disabled by default, WMI requires some configuration before NEMS Linux
 can monitor the Windows host.
 
-.. note:: As of 03/17/2023 NEMS 1.6 and WMI has been tested and verified to work on the following versions of Windows
-- Windows 10 Pro Version 22H2
+.. note:: As of 03/17/2023 NEMS 1.6 and WMI has been tested and verified to work on the following versions of Windows - Windows 10 Pro Version 22H2
 - Windows 11 Pro Version 22H2
 - Windows Server 2016 Version 1607
 - Windows Server 2019 Version 1809
